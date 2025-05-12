@@ -1,0 +1,7 @@
+<h1>Index page</h1>
+<h1>Cook Book</h1>
+<ul>
+  <% @categories.each do |category| %>
+  <li><%= category.name %></li>
+  <% end %>
+</ul>
