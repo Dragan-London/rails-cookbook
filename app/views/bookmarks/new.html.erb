@@ -1,0 +1,12 @@
+<h1>Add Recipe to specific category</h1>
+<h1>Add recipe to <%= @category.name %> category</h1>
+<%= simple_form_for [@category, @bookmark] do |f| %>
+<%= f.input :comment %>
+<%= f.association :recipe %>
+<%= f.submit %>
+<% end %>
+<br>
+<%= link_to "Back to Category Page", category_path(@category), class: "btn btn-warning" %>
+<br>
+<br>
+<%= link_to "Back to Home Page", categories_path, class: "btn btn-primary" %>
